@@ -650,14 +650,14 @@ footer {
   }
 
   #textblock p:last-of-type {
-    padding-bottom: 30em;
+    padding-bottom: 20em;
   }
 
   #textblock img,  #textblock video {
     position: absolute;
     bottom: 0em;
-    max-height: 30em;
-    max-width: 35vw;
+    max-height: 20em;
+    max-width: 25vw;
   }
 
 
