@@ -216,13 +216,13 @@ footer {
 }
 
 .abouttoggle {
-  height: 56vh;
+  height: 55vh;
   position: relative;
   display: none;
 }
 
 .indextoggle {
-  height: 56vh;
+  height: 55vh;
   position: relative;
   display: none;
 }
@@ -230,7 +230,7 @@ footer {
 .indextoggle li a {
   font-family: "Lora", serif;
   font-weight: 300;
-  line-height: 2;
+  line-height: 1.75;
 
   color: var(--white);
   text-decoration: none;
