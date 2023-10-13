@@ -644,7 +644,10 @@ footer {
     line-height: 1.5;
     max-width: 80%;
   }
-
+#smaller {
+  width: 10vw;
+}
+  
   #mini {
     padding: 3em 0em 5em 0em;
   }
