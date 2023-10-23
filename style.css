@@ -139,6 +139,7 @@ p {
 
 #multipliedImg {
   z-index: -10;
+  position: relative;
 }
 
 figure img {
@@ -370,9 +371,10 @@ footer {
     margin: 0px;
     padding: 0px;
     width: max-content;
-    padding: 20px 20px 0 20px;
+    padding: 15px 15px 0 15px;
     height: max-content;
-    background-color: var(--white);
+    background-color: rgb(245, 245, 242, .8); 
+    
   }
 
   figcaption h6,
@@ -656,10 +658,17 @@ footer {
     padding-bottom: 20em;
   }
 
-  #textblock img,  #textblock video {
+  #textblock img {
     position: absolute;
     bottom: 0em;
     max-height: 20em;
+    max-width: 25vw;
+  }
+
+  #textblock video {
+    position: absolute;
+    bottom: 0em;
+    max-height: 23.5em;
     max-width: 25vw;
   }
 
