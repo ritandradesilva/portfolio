@@ -1,0 +1,682 @@
+/*importar fontes*/
+
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap");
+
+/*variáveis de cor*/
+/*basicamente aqui criei umas variáveis para usarmos sempre os mesmos
+valores de branco e negro e se os quisermos alterar podermos alterar todos ao mesmo tempo*/
+
+:root {
+  --white: rgb(245, 245, 242);
+  --black: rgb(10, 10, 10);
+}
+
+/*css reset*/
+/*olá! bem vindos, fiz um rset pq isto vem já com ideias*/
+
+html {
+  box-sizing: border-box;
+  font-size: 18px;
+  background-color: rgb(245, 245, 242);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*viewport max witdh 600px || telemóvel*/
+/*telefona para me encontrares*/
+/*home*/
+
+h1,
+h2 {
+  font-family: "inter tight", "helvetica", sans-serif;
+  font-size: 64px;
+}
+
+h1 a {
+  text-decoration: none;
+  color: var(--black);
+  line-height: 1.3;
+}
+
+h4,
+h5 {
+  font-family: "inter tight", "helvetica", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+h6 {
+  font-family: "inter tight", "helvetica", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/*header*/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 0.8;
+  padding: 1em;
+  z-index: 1;
+}
+
+/*main*/
+
+main:not(#blockproj) {
+  padding: 7.5em 1em 1em 1em;
+}
+
+#home main {
+  display: flex;
+  flex-direction: column;
+}
+
+figure {
+  padding-bottom: 6em;
+  margin: 0;
+  position: relative;
+}
+
+figure a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+figcaption {
+  text-align: center;
+  padding-top: 0.62em;
+  width: 100%;
+}
+
+figcaption h6:nth-of-type(2) {
+  padding-bottom: 0.8em;
+}
+
+p {
+  font-family: "Lora", serif;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.2;
+  padding-bottom: 1em;
+}
+
+.back {
+  z-index: 0;
+}
+
+figure:not(.back) {
+  z-index: 2;
+}
+
+#multipliedImg {
+  z-index: 0;
+  position: relative;
+}
+
+figure img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/*footer*/
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+#footerNav {
+  padding: 1.5em 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+#footerNav nav,
+#footerNav div {
+  flex: 50%;
+}
+
+#footerNav div {
+  text-align: right;
+}
+
+#collapsiblefooter {
+  line-height: 1.2;
+  cursor: default;
+  padding: 0.3em 1em 0.4em 1em;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/*about + index*/
+
+#aboutbutton,
+#indexbutton,
+#langtoggle {
+  line-height: 1.5;
+}
+
+#aboutbutton,
+#indexbutton,
+#langtoggle {
+  width: fit-content;
+}
+
+.active {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+#langtoggle {
+  position: relative;
+  width: max-content;
+  float: right;
+}
+
+#langtoggle a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.abouttoggle {
+  height: 55vh;
+  position: relative;
+  display: none;
+}
+
+.indextoggle {
+  height: 55vh;
+  position: relative;
+  display: none;
+}
+
+.indextoggle li a {
+  font-family: "Lora", serif;
+  font-weight: 300;
+  line-height: 1.75;
+
+  color: var(--white);
+  text-decoration: none;
+}
+
+.abouttoggle p,
+.indextoggle p,
+.indextoggle li a {
+  font-size: 22px;
+}
+
+.abouttoggle p {
+  line-height: 1.5;
+}
+
+.abouttoggle a {
+  color: var(--white);
+}
+
+.abouttoggle div:not(.overlay),
+.indextoggle div:not(.overlay) {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  left: 0em;
+}
+
+#indexdesc {
+  display: none;
+  line-height: 1.5;
+}
+
+/*overlay*/
+
+.overlay {
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/*projeto*/
+
+#proj {
+  position: relative;
+}
+
+/*header*/
+
+#proj h1 {
+  font-size: 34px;
+}
+
+#projheader {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 1.2em 0em 0em 0em;
+  top: 0;
+  left: 50vw;
+}
+
+#projheader h6 {
+  padding-bottom: 1em;
+  padding-top: 0.45em;
+}
+
+/*main*/
+
+#blockproj {
+  padding: 7em 0em 6em 0em;
+  display: flex;
+  flex-direction: column;
+}
+
+#imgblock {
+  padding-top: 3em;
+  padding-bottom: 2em;
+}
+
+
+#textblock p {
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+#textblock a {
+  color: var(--black);
+}
+
+#textblock video, #textblock img{
+  padding-top: 3em;
+  max-width: 100%;
+}
+
+/*viewport min witdh 600px || desktop*/
+/*computerssshackerssssvibes*/
+
+@media only screen and (min-width: 600px) {
+  /*home*/
+  /*header*/
+
+  h1 {
+    font-size: 76px;
+    cursor: pointer;
+  }
+
+  h1 a:hover {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+  }
+
+  /*main*/
+
+  h4 {
+    font-size: 28px;
+  }
+
+  h5 {
+    font-size: 28px;
+  }
+
+  figcaption {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: left;
+    width: 100%;
+    z-index: 999;
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    width: max-content;
+    padding: 15px 15px 0 15px;
+    height: max-content;
+    background-color: rgb(245, 245, 242, .8); 
+    
+  }
+
+  figcaption h6,
+  figcaption p {
+    font-size: 20px;
+    color: var(--black);
+  }
+
+  figcaption h6:first-of-type {
+    display: none;
+  }
+
+  #home main figure:first-of-type,
+  #home main figure:nth-of-type(4),
+  #home main figure:nth-of-type(6) {
+    flex: 100%;
+    max-width: 92%;
+    margin: auto;
+  }
+
+  #home main figure:first-of-type img,
+  #home main figure:nth-of-type(4) img,
+  #home main figure:nth-of-type(6) img {
+    width: 60%;
+    margin-bottom: 3em;
+  }
+
+  #home main figure:nth-of-type(2) {
+    flex: 30%;
+  }
+
+  #home main figure:nth-of-type(2) img {
+    width: 50%;
+    padding-top: 20%;
+  }
+
+  #home main figure:nth-of-type(3):not(#multipliedImg) {
+    flex: 70%;
+  }
+
+  #home main figure:nth-of-type(3):not(#multipliedImg) img {
+    width: 60%;
+    position: absolute;
+    right: 40%;
+  }
+  #home main figure:nth-of-type(5) {
+    flex: 100%;
+    max-width: 25%;
+    margin: auto;
+    margin-top: 4em;
+    margin-bottom: 8em;
+  }
+
+  #home main figure:nth-of-type(5)img {
+    width: 40%;
+  }
+
+  #home main figure:nth-of-type(7) {
+    flex: 30%;
+    width: 30%;
+    padding-top: 2em;
+  }
+
+  #home main figure:nth-of-type(7) img {
+    width: 40%;
+  }
+
+  #scrollblock {
+    flex: 60%;
+    position: relative;
+  }
+
+  #scrollblock figure:first-of-type {
+    padding-top: 40%;
+  }
+  #scrollblock figure:first-of-type img {
+    max-width: 65%;
+  }
+
+  #scrollblock figure:nth-of-type(2) {
+    padding-top: 40%;
+    width: 90%;
+  }
+
+  #scrollblock figure:nth-of-type(2) img {
+    position: absolute;
+    right: 3em;
+  }
+
+  #multipliedImg {
+    position: absolute;
+    bottom: -1em;
+    left: -3em;
+  }
+
+  #multipliedImg img {
+    max-width: 25%;
+    margin: 0;
+  }
+
+  #home main figure:nth-of-type(8) {
+    flex: 100%;
+    margin: auto;
+    padding-bottom: 1em;
+    padding-top: 8em;
+  }
+
+  #home main figure:nth-of-type(8) img {
+    width: 40%;
+    float: right;
+    margin-right: 5%;
+  }
+
+  #home main figure:nth-of-type(9) {
+    flex: 70%;
+    margin: auto;
+  }
+  #home main figure:nth-of-type(9) img {
+    width: 30%;
+    float: left;
+    margin-left: 20%;
+    margin-top: 4em;
+    margin-right: 10%;
+  }
+
+  #home main figure:nth-of-type(10) {
+    flex: 30%;
+    max-width: 30%;
+    margin: auto;
+  }
+  #home main figure:nth-of-type(10) img {
+    width: 65%;
+    float: right;
+    margin-right: 16%;
+  }
+
+  #home main figure:nth-of-type(11) {
+    flex: 100%;
+    margin: auto;
+    margin-top: 4em;
+  }
+  #home main figure:nth-of-type(11) img {
+    width: 44%;
+  }
+
+  /*footer*/
+
+  #aboutbutton:hover,
+  #indexbutton:hover {
+    cursor: pointer;
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+  }
+
+  #langtoggle a:hover {
+    cursor: pointer;
+  }
+
+  #langtoggle a:hover > span {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+  }
+
+  /*about + index*/
+
+  .abouttoggle p {
+    width: 50%;
+    min-width: 500px;
+  }
+
+  .abouttoggle li,
+  .indextoggle p,
+  .indextoggle li {
+    font-size: 28px;
+  }
+
+  .indextoggle ul:first-of-type {
+    display: none;
+  }
+
+  #indexdesc {
+    display: block;
+  }
+
+  #indexdesc li a:hover {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+  }
+
+  #home main {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  /*projeto*/
+  /*header*/
+
+  #proj header {
+    z-index: 10;
+    padding-top: 1.2em;
+  }
+
+  #proj header h1 {
+    font-size: 28px;
+  }
+
+  #proj main:not(#blockproj) {
+    padding: 15em 1em 6em 1em;
+  }
+
+  #projheader {
+    flex-direction: row;
+    padding: 0.8em 0em 0em 0em;
+    top: 0;
+    left: 30%;
+    width: 70%;
+  }
+
+  #projheader h6 {
+    font-size: 28px;
+    width: 42%;
+    text-align: right;
+    padding-right: 1em;
+    padding-top: 0.3em;
+  }
+
+  #projheader p {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 18px;
+  }
+
+  #projheader p br {
+    display: none;
+  }
+
+  /*main*/
+
+  #blockproj {
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0em 1em 0em 1em;
+  }
+
+  #imgblock {
+    padding-top: 0px;
+    padding-right: 2em;
+    padding-bottom: 0em;
+    flex: 0 0 60%;
+    max-width: 60%;
+    height: 100%;
+  }
+
+  #imgblock img:not(:last-of-type) {
+    padding-top: 0px;
+    padding-bottom: 2em;
+  }
+
+  #textblock {
+    align-self: flex-start;
+    flex: 0 0 40%;
+    order: 3;
+  }
+
+  #textblock p {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 80%;
+  }
+#smaller {
+  width: 10vw;
+}
+  
+  #mini {
+    padding: 3em 0em 5em 0em;
+  }
+
+  #textblock p:last-of-type {
+    padding-bottom: 20em;
+  }
+
+  #textblock img {
+    position: absolute;
+    bottom: 0em;
+    max-height: 20em;
+    max-width: 25vw;
+  }
+
+  #textblock video {
+    position: absolute;
+    bottom: 0em;
+    max-height: 23.5em;
+    max-width: 25vw;
+  }
+
+
+  #imglesspadding {
+    margin-left: 0em;
+    width: 20em;
+  }
+}
