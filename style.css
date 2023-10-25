@@ -343,7 +343,7 @@ footer {
 
   h1 {
     font-size: 76px;
-    cursor: pointer;
+    cursor: default;
   }
 
   h1 a:hover {
