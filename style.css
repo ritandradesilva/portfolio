@@ -142,6 +142,10 @@ p {
   position: relative;
 }
 
+#lixomini {
+  max-height: 70vh;
+}
+
 figure img {
   margin-left: auto;
   margin-right: auto;
@@ -630,6 +634,14 @@ footer {
     flex: 0 0 60%;
     max-width: 60%;
     height: 100%;
+  }
+
+  #lixovideo {
+    padding-top: 0px;
+    padding-right: 2em;
+    padding-bottom: 0em;
+    flex: 0 0 60%;
+    max-width: 100%;
   }
 
   #imgblock img:not(:last-of-type) {
