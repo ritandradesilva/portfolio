@@ -146,6 +146,10 @@ p {
   max-height: 50vh;
 }
 
+#lixovideo {
+  max-width: 89vw;
+}
+
 figure img {
   margin-left: auto;
   margin-right: auto;
