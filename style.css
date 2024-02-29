@@ -231,7 +231,7 @@ footer {
 }
 
 .indextoggle {
-  height: 55vh;
+  height: 60vh;
   position: relative;
   display: none;
 }
@@ -443,12 +443,25 @@ footer {
   }
 
   #home main figure:nth-of-type(8) {
+flex: 100%;
+    max-width: 40%;
+    margin-top: -11em;
+    margin-right: 70%;
+   
+  }
+
+  #home main figure:nth-of-type(8)img {
+    width: 100%;
+  }
+
+
+  #home main figure:nth-of-type(9) {
     flex: 30%;
     width: 30%;
     padding-top: 2em;
   }
 
-  #home main figure:nth-of-type(8) img {
+  #home main figure:nth-of-type(9) img {
     width: 40%;
   }
 
@@ -485,24 +498,24 @@ footer {
     margin: 0;
   }
 
-  #home main figure:nth-of-type(9) {
+  #home main figure:nth-of-type(10) {
     flex: 100%;
     margin: auto;
     padding-bottom: 1em;
     padding-top: 8em;
   }
 
-  #home main figure:nth-of-type(9) img {
+  #home main figure:nth-of-type(10) img {
     width: 40%;
     float: right;
     margin-right: 5%;
   }
 
-  #home main figure:nth-of-type(10) {
+  #home main figure:nth-of-type(11) {
     flex: 70%;
     margin: auto;
   }
-  #home main figure:nth-of-type(10) img {
+  #home main figure:nth-of-type(11) img {
     width: 30%;
     float: left;
     margin-left: 20%;
@@ -510,23 +523,23 @@ footer {
     margin-right: 10%;
   }
 
-  #home main figure:nth-of-type(11) {
+  #home main figure:nth-of-type(12) {
     flex: 30%;
     max-width: 30%;
     margin: auto;
   }
-  #home main figure:nth-of-type(11) img {
+  #home main figure:nth-of-type(12) img {
     width: 65%;
     float: right;
     margin-right: 16%;
   }
 
-  #home main figure:nth-of-type(12) {
+  #home main figure:nth-of-type(13) {
     flex: 100%;
     margin: auto;
     margin-top: 4em;
   }
-  #home main figure:nth-of-type(12) img {
+  #home main figure:nth-of-type(13) img {
     width: 44%;
   }
 
