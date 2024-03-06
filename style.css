@@ -150,6 +150,10 @@ p {
   max-width: 89vw;
 }
 
+#notsosmall {
+max-height: 70vw;
+} 
+
 figure img {
   margin-left: auto;
   margin-right: auto;
@@ -489,7 +493,8 @@ flex: 100%;
 
   #multipliedImg {
     position: absolute;
-    bottom: -1em;
+    max-width: 90%;
+    bottom: 0em;
     left: -3em;
   }
 
@@ -680,6 +685,11 @@ flex: 100%;
 #smaller {
   width: 10vw;
 }
+
+#notsosmall {
+  max-width: 40vw;
+
+} 
   
   #mini {
     padding: 3em 0em 5em 0em;
