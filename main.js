@@ -39,15 +39,12 @@ $(document).ready(function () {
 
   //ao clicar no botão de about, chama esta função
   $("#aboutbutton").click(function () {
-
    //abrir (se fechado) ou fechar (se aberto) o about e fechar o index
     $("#aboutbutton").toggleClass("active");
     $("#indexbutton").removeClass("active");
-
     $(".abouttoggle").toggle();
     $(".indextoggle").hide();
   });
-
   //ao clicar no overlay, chama esta função
   $(".overlay").click(function () {
    //fechar o index ou about
@@ -104,8 +101,8 @@ function whatIsRitaDoing() {
   //guardar na variável activity um array com as diferentes atividades
   let activity = [
     "sleeping",
-    "at uni",
-    "at the cinema selling popcorn",
+    "scrolling linkedin",
+    "at the beach but worrying about unemployment",
     "eating bánh mì with my friends",
     "staring at 3 different screens",
     "baking something"
@@ -113,8 +110,8 @@ function whatIsRitaDoing() {
 
   let activityPT = [
     "a dormir",
-    "na universidade",
-    "no cinema a vender pipocas",
+    "a fazer scroll no linkedin",
+    "na praia mas preocupada com o desemprego",
     "a comer bánh mì com os meus amigos",
     "a olhar para 3 ecrãs diferentes",
     "a cozinhar alguma coisa"
@@ -129,40 +126,40 @@ function whatIsRitaDoing() {
 
   //com um conditional statement (if/else), detetamos qual é a hora e dia e definimos a atividade atual, escrevendo no span currentActivityEN essa atividade
   if (hour >= 23 || hour < 10) {
-    //SLEEPING
+    // SLEEPING
     $("#currentActivityEN").html(activity[0]);
     $("#currentActivityPT").html(activityPT[0]);
-  } else if (day < 6 && hour >= 10 && hour < 14) {
-    //AT UNI
+  } else if (day >= 1 && day <= 5 && hour >= 10 && hour < 14) {
+    // AT LINKEDIN
     $("#currentActivityEN").html(activity[1]);
     $("#currentActivityPT").html(activityPT[1]);
-  } else if (day < 6 && hour >= 14 && hour < 19) {
-    //AT THE CINEMA
+  } else if (day >= 1 && day <= 5 && hour >= 14 && hour < 19) {
+    // AT BEACH
     $("#currentActivityEN").html(activity[2]);
     $("#currentActivityPT").html(activityPT[2]);
-  } else if (day < 6 && hour >= 19 && hour < 22) {
-   //EATING
-   $("#currentActivityEN").html(activity[3]);
-   $("#currentActivityPT").html(activityPT[3]);
- } else if (day < 6 && hour == 22) {
-   //SCREENS
-   $("#currentActivityEN").html(activity[4]);
-   $("#currentActivityPT").html(activityPT[4]);
-  } else if (day >= 6 && hour == 23 || hour < 14) {
-   //SLEEPING ON WEEKEND
-   $("#currentActivityEN").html(activity[0]);
-   $("#currentActivityPT").html(activityPT[0]);
- } else if (day >= 6 && hour <= 14 && hour < 19) {
-   //SCREENS ON WEEKEND
-   $("#currentActivityEN").html(activity[4]);
-   $("#currentActivityPT").html(activityPT[4]);
- } else if (day >= 6 && hour <= 19 && hour < 22) {
-   //BAKING ON WEEKEND
-   $("#currentActivityEN").html(activity[5]);
-   $("#currentActivityPT").html(activityPT[5]);
- } else if (day >= 6 && hour >= 22 ) {
-   //EATING ON WEEKEND
-   $("#currentActivityEN").html(activity[3]);
-   $("#currentActivityPT").html(activityPT[3]);
- } 
+  } else if (day >= 1 && day <= 5 && hour >= 19 && hour < 22) {
+    // EATING
+    $("#currentActivityEN").html(activity[3]);
+    $("#currentActivityPT").html(activityPT[3]);
+  } else if (day >= 1 && day <= 5 && hour == 22) {
+    // SCREENS
+    $("#currentActivityEN").html(activity[4]);
+    $("#currentActivityPT").html(activity[4]);
+  } else if (day === 6 && hour >= 10 && hour < 14) {
+    // SLEEPING ON SATURDAY MORNING
+    $("#currentActivityEN").html(activity[0]);
+    $("#currentActivityPT").html(activityPT[0]);
+  } else if ((day === 6 && hour >= 14 && hour < 19) || (day === 0 && hour >= 10 && hour < 19)) {
+    // SCREENS ON SATURDAY AFTERNOON OR SUNDAY
+    $("#currentActivityEN").html(activity[4]);
+    $("#currentActivityPT").html(activityPT[4]);
+  } else if ((day === 6 && hour >= 19 && hour < 22) || (day === 0 && hour >= 19 && hour < 22)) {
+    // BAKING ON SATURDAY EVENING OR SUNDAY EVENING
+    $("#currentActivityEN").html(activity[5]);
+    $("#currentActivityPT").html(activityPT[5]);
+  } else if (day === 6 && hour >= 22 || day === 0 && hour >= 22) {
+    // EATING ON SATURDAY NIGHT OR SUNDAY NIGHT
+    $("#currentActivityEN").html(activity[3]);
+    $("#currentActivityPT").html(activityPT[3]);
+  }
 }
