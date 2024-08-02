@@ -77,8 +77,9 @@ h5 {
   font-weight: 400;
 }
 
+
 .portoemarquee h5{
-overflow: visible;
+  overflow: visible;
  background-color: var(--black);
   z-index: 10;
   padding-right: 0.5em;
@@ -86,6 +87,7 @@ overflow: visible;
   width: max-content;
   text-wrap: nowrap;
 }
+
 
 h6 {
   font-family: "inter tight", "helvetica", sans-serif;
@@ -170,12 +172,17 @@ p {
   max-width: 89vw;
 }
 
+#tour {
+  margin-bottom: 12em;
+}
+
 #maispb {
   max-height: 40vh;
   margin-bottom: -9em;
 }
 
 #notsosmall {
+  min-height: 20%;
 max-height: 70vw;
 } 
 
@@ -201,7 +208,6 @@ footer {
 }
 
 .portoemarquee h5{
-  
   overflow: visible;
  background-color: var(--black);
   z-index: 10;
@@ -210,6 +216,7 @@ footer {
   width: max-content;
   text-wrap: nowrap;
 }
+
 #marquee-container {
   margin-top: 0.3em;
   overflow: hidden;
@@ -393,6 +400,8 @@ footer {
   flex-direction: column;
 }
 
+
+
 #imgblock {
   padding-top: 3em;
   padding-bottom: 2em;
@@ -402,7 +411,6 @@ footer {
 #textblock p {
   font-size: 22px;
   line-height: 1.4;
-  cursor: default;
 }
 
 #textblock a {
@@ -784,11 +792,11 @@ margin-bottom: 4em;
     max-width: 100%;
   }
 
+
   #extraspace {
     padding-top: 10em;
   }
 
-  
   #imgblock img:not(:last-of-type) {
     padding-top: 0px;
     padding-bottom: 2em;
