@@ -77,6 +77,11 @@ h5 {
   font-weight: 400;
 }
 
+.portoemarquee h5{
+
+  text-wrap: nowrap;
+}
+
 h6 {
   font-family: "inter tight", "helvetica", sans-serif;
   font-size: 24px;
