@@ -78,7 +78,12 @@ h5 {
 }
 
 .portoemarquee h5{
-
+overflow: visible;
+ background-color: var(--black);
+  z-index: 10;
+  padding-right: 0.5em;
+  white-space:nowrap;
+  width: max-content;
   text-wrap: nowrap;
 }
 
@@ -196,9 +201,13 @@ footer {
 }
 
 .portoemarquee h5{
-  background-color: var(--black);
+  
+  overflow: visible;
+ background-color: var(--black);
   z-index: 10;
-  padding-right: 1em;
+  padding-right: 0.5em;
+  white-space:nowrap;
+  width: max-content;
   text-wrap: nowrap;
 }
 #marquee-container {
@@ -393,6 +402,7 @@ footer {
 #textblock p {
   font-size: 22px;
   line-height: 1.4;
+  cursor: default;
 }
 
 #textblock a {
