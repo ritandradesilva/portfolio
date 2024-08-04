@@ -66,39 +66,38 @@ function isItPhone() {
   }
 }
 
-//esta função calcula o que a rita deve estar a fazer
 function whatIsRitaDoing() {
-//guarda na constante d a data atual (year,month,day,hours,minutes,seconds,ms)
+  // guarda na constante d a data atual (year,month,day,hours,minutes,seconds,ms)
   const d = new Date();
 
-  //dessa data, extraímos o dia da semana atual (1-7) e guardamos na variável day
+  // dessa data, extraímos o dia da semana atual (0-6) e guardamos na variável day
   let day = d.getDay();
 
-  //dessa data, extraímos a hora atual (0-23) e guardamos na variável hour
+  // dessa data, extraímos a hora atual (0-23) e guardamos na variável hour
   let hour = d.getHours();
   
-  //guardar na variável dayText um array com os dias da semana
+  // guardar na variável dayText um array com os dias da semana (começando por domingo)
   let dayText = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday",
-    "Sunday",
+    "Saturday"
   ];
 
   let dayTextPT = [
+    "domingo",
     "segunda-feira",
     "terça-feira",
     "quarta-feira",
     "quinta-feira",
     "sexta-feira",
-    "sábado",
-    "domingo",
+    "sábado"
   ];
 
-  //guardar na variável activity um array com as diferentes atividades
+  // guardar na variável activity um array com as diferentes atividades
   let activity = [
     "sleeping",
     "scrolling linkedin",
@@ -117,14 +116,14 @@ function whatIsRitaDoing() {
     "a cozinhar alguma coisa"
   ];
 
-  //no span currentTime, escrevemos a hora atual com a variável hour
+  // no span currentTime, escrevemos a hora atual com a variável hour
   $("#currentTime").html(hour);
 
-  //no span currentDayEN, escrevemos o dia da semana com a variável day
-  $("#currentDayEN").html(dayText[day - 1]);
-  $("#currentDayPT").html(dayTextPT[day - 1]);
+  // no span currentDayEN, escrevemos o dia da semana com a variável day
+  $("#currentDayEN").html(dayText[day]);
+  $("#currentDayPT").html(dayTextPT[day]);
 
-  //com um conditional statement (if/else), detetamos qual é a hora e dia e definimos a atividade atual, escrevendo no span currentActivityEN essa atividade
+  // com um conditional statement (if/else), detetamos qual é a hora e dia e definimos a atividade atual, escrevendo no span currentActivityEN essa atividade
   if (hour >= 23 || hour < 10) {
     // SLEEPING
     $("#currentActivityEN").html(activity[0]);
@@ -144,7 +143,7 @@ function whatIsRitaDoing() {
   } else if (day >= 1 && day <= 5 && hour == 22) {
     // SCREENS
     $("#currentActivityEN").html(activity[4]);
-    $("#currentActivityPT").html(activity[4]);
+    $("#currentActivityPT").html(activityPT[4]);
   } else if (day === 6 && hour >= 10 && hour < 14) {
     // SLEEPING ON SATURDAY MORNING
     $("#currentActivityEN").html(activity[0]);
@@ -163,3 +162,4 @@ function whatIsRitaDoing() {
     $("#currentActivityPT").html(activityPT[3]);
   }
 }
+
