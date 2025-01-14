@@ -777,7 +777,7 @@ margin-bottom: 4em;
   }
 
 #japan #extraspace #blockproj:not(:last-child) {
-  padding: 7em 0em 10em 0em;
+  padding: 7em 0em 4em 0em;
 
 }
 
@@ -848,6 +848,11 @@ margin-bottom: 4em;
     max-width: 25vw;
   }
 
+  #japan #textblock img {
+    position: static;
+  }
+
+  
   #textblock video {
     position: absolute;
     bottom: 0em;
