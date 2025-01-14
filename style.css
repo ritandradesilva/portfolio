@@ -776,7 +776,7 @@ margin-bottom: 4em;
     padding: 0em 1em 0em 1em;
   }
 
-#japan #blockproj:not(:last-child) {
+#japan #blockproj:not(:first-child , :last-child) {
   padding: 7em 0em 20em 0em;
 
 }
