@@ -776,12 +776,12 @@ margin-bottom: 4em;
     padding: 0em 1em 0em 1em;
   }
 
-#japan #extraspace #blockproj:not(:last-of-type) {
+#japan #extraspace #blockproj:not(:last-child) {
   padding: 7em 0em 4em 0em;
 
 }
 
-#japan #extraspace #blockproj:last-type {
+#japan #extraspace #blockproj:last-child {
   padding: 7em 0em 0em 0em;
   background-color: var(--blue);
 
