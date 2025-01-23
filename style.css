@@ -796,6 +796,10 @@ margin-bottom: 4em;
     height: 100%;
   }
 
+   #imgblock img, video{
+    width: 100vw;
+   }
+
   #lixovideo {
     padding-top: 0px;
     padding-right: 2em;
