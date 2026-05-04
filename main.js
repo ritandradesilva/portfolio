@@ -100,8 +100,8 @@ function whatIsRitaDoing() {
   // guardar na variável activity um array com as diferentes atividades
   let activity = [
     "sleeping",
-    "scrolling linkedin",
-    "at the beach but worrying about unemployment",
+    "knitting",
+    "at the beach but worrying about my productivity",
     "eating bánh mì with my friends",
     "staring at 3 different screens",
     "baking something"
@@ -109,8 +109,8 @@ function whatIsRitaDoing() {
 
   let activityPT = [
     "a dormir",
-    "a fazer scroll no linkedin",
-    "na praia mas preocupada com o desemprego",
+    "a fazer tricô",
+    "na praia mas preocupada com a minha produtividade",
     "a comer bánh mì com os meus amigos",
     "a olhar para 3 ecrãs diferentes",
     "a cozinhar alguma coisa"
@@ -129,7 +129,7 @@ function whatIsRitaDoing() {
     $("#currentActivityEN").html(activity[0]);
     $("#currentActivityPT").html(activityPT[0]);
   } else if (day >= 1 && day <= 5 && hour >= 10 && hour < 14) {
-    // AT LINKEDIN
+    // KNITTING
     $("#currentActivityEN").html(activity[1]);
     $("#currentActivityPT").html(activityPT[1]);
   } else if (day >= 1 && day <= 5 && hour >= 14 && hour < 19) {
